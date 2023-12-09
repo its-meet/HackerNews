@@ -14,7 +14,7 @@ const Articles = () => {
 
   const fetchSearchNews = async (query = searchQuery) => {
     const resp = await fetch(
-      `http://hn.algolia.com/api/v1/search?query=${query}&page=${page}`
+      `https://hn.algolia.com/api/v1/search?query=${query}&page=${page}`
     );
     const answer = await resp.json();
     setSearchData(answer.hits);
